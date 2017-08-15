@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
 
   before_action :find_article, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
+  before_filter :authorize
 
   def index
     @articles = Article.all

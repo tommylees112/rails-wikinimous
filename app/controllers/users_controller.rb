@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   def new
-
   end
 
   def create
@@ -8,7 +7,6 @@ class UsersController < ApplicationController
     if user.save
       session[:user_id] = user.id
       redirect_to articles_path
-      raise
     else
       redirect_to signup_path
     end
