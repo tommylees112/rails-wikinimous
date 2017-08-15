@@ -1,0 +1,14 @@
+<h1>All Articles:</h1>
+
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <%= link_to article.title.capitalize, article_path(article) %>
+      <%= ". Votes - #{article.votes}"%>
+      <%= link_to "Edit", edit_article_path(article) %>
+      <%= link_to "Upvote", edit_article_path(article) %>
+      <%= link_to "Downvote", edit_article_path(article) %>
+    </li>
+  <% end %>
+</ul>
+

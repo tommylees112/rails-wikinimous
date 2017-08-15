@@ -1,0 +1,10 @@
+<h1>Article</h1>
+
+<div class="container">
+  <h2><%= @article.title.capitalize %></h2>
+  <p><em><%= @article.content %></em></p>
+  <p>Votes: <%= @article.votes %></p>
+   <%= link_to "Edit", edit_article_path(@article) %>
+</div>
+
+<%= link_to "Home", articles_path %>
